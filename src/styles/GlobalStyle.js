@@ -16,7 +16,7 @@ const GlobalStyle = createGlobalStyle`
 
     --clr-bg-back: #1A1A1D;
     --clr-bg-front: #4E4E50;
-    
+
     --font-family-1: 'JetBrains Mono', monospace;
     --font-family-2: 'Gugi', cursive;
   }
@@ -24,6 +24,15 @@ const GlobalStyle = createGlobalStyle`
   html {
     font-size: 16px;
     font-family: var(--font-family-1);
+  }
+
+  body {
+    color: var(--clr-text-primary);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.9) 0%), 
+      url('https://images.pexels.com/photos/8252605/pexels-photo-8252605.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260');
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
   }
 `;
 
