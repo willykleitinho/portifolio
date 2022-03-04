@@ -111,8 +111,7 @@ export default function Projects() {
         <MainProject>
           <div className='img'>
             <div className='buttons'>
-              <AButton href='' title='' target='_blank' rel='noreferrer'>Live</AButton>
-              <AButton href='' title='' target='_blank' rel='noreferrer'>Github</AButton>
+            <AButton href='https://www.moviefliek.com' title='Go to MovieFliek website' target='_blank' rel='noreferrer'>Live</AButton>
             </div>
           </div>
           <div className='info'>

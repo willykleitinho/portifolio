@@ -9,6 +9,7 @@ const StyledNav = styled.nav`
   margin: auto;
   display: flex;
   justify-content: flex-end;
+  z-index: 1;
 
   ul {
     list-style: none;
@@ -17,6 +18,8 @@ const StyledNav = styled.nav`
     background: var(--clr-bg-back);
     position: relative;
     padding: 0.5rem 1rem;
+    padding-left: 5rem;
+    clip-path: polygon(0 0, 300% 0%, 300% 100%, 12% 99%);
 
     &::after {
       content: '';
@@ -28,19 +31,7 @@ const StyledNav = styled.nav`
       height: 100%;
       background: inherit;
     }
-
-    &::before {
-      content: '';
-      display: block;
-      position: absolute;
-      top: 0;
-      right: 100%;
-      width: 0;
-      height: 0;
-      border-top: 53px solid var(--clr-bg-back);
-      border-left: 53px solid transparent;
-    }
-
+    
     li {
       padding: 0.5rem 1rem;
       position: relative;

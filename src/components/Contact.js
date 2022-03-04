@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons'
-import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons'
+import { faGithub } from '@fortawesome/free-brands-svg-icons'
 
 const StyledSection = styled.section`
   padding: 6rem 0;
@@ -37,11 +37,7 @@ export default function Contact() {
         <ul>
           <li>
             <FontAwesomeIcon icon={faEnvelope} />
-            email@gmail.com
-          </li>
-          <li>
-            <FontAwesomeIcon icon={faLinkedin} />
-            Lindkedin.com/willye
+            owellington.nascimento@gmail.com
           </li>
           <li>
             <FontAwesomeIcon icon={faGithub} />
