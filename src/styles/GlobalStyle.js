@@ -16,6 +16,7 @@ const GlobalStyle = createGlobalStyle`
 
     --clr-bg-back: #1A1A1D;
     --clr-bg-front: #4E4E50;
+    --clr-bg-front: #1A1A1D;
 
     --font-family-1: 'JetBrains Mono', monospace;
     --font-family-2: 'Gugi', cursive;

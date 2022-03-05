@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import { motion, useViewportScroll, useTransform } from 'framer-motion';
+
 const StyledNav = styled.nav`
   position: fixed;
   top: 0;
@@ -15,7 +17,6 @@ const StyledNav = styled.nav`
     list-style: none;
     display: flex;
     gap: 2rem;
-    background: var(--clr-bg-back);
     position: relative;
     padding: 0.5rem 1rem;
     padding-left: 5rem;
@@ -31,7 +32,7 @@ const StyledNav = styled.nav`
       height: 100%;
       background: inherit;
     }
-    
+
     li {
       padding: 0.5rem 1rem;
       position: relative;
@@ -71,9 +72,13 @@ const StyledNav = styled.nav`
 `;
 
 export default function Navbar() {
+
+  const { scrollYProgress } = useViewportScroll();
+  const bgColor = useTransform(scrollYProgress, [0, 0.3, 0.35], ['rgba(0,0,0,0)', 'rgba(0,0,0,0)', '#1A1A1D'])
+
   return (
     <StyledNav>
-      <ul>
+      <motion.ul style={{ backgroundColor: bgColor }} transition={{ delay: 1 }} initial={{ x: '100%' }} animate={{ x: 0 }}>
         <li>
           <a href='#home' title=''>home</a>
         </li>
@@ -86,7 +91,7 @@ export default function Navbar() {
         <li>
           <a href='#contato' title=''>contato</a>
         </li>
-      </ul>
+      </motion.ul>
     </StyledNav>
   );
 }

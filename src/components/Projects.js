@@ -1,7 +1,9 @@
 import styled from 'styled-components';
 
 import AButton from './AButton';
-import bgImg from './temp.png';
+import mainProjectImg from './moviefliek.png';
+import secondProjectImg from './todo-app.png';
+import thirdProjectImg from './rest-countries-interface.png';
 
 const StyledSection = styled.section`
   padding: 6rem 0;
@@ -28,8 +30,9 @@ const MainProject = styled.article`
   .img {
     aspect-ratio: 16/9;
     background: #aaa;
-    background: url(${bgImg});
+    background: url(${mainProjectImg});
     background-size: cover;
+    border: 4px solid white;
 
     .buttons {
       height: 100%;
@@ -75,7 +78,9 @@ const OtherProjects = styled.div`
     aspect-ratio: 16/9;
     width: 100%;
     background: #aaa;
+    background-size: cover !important;
     margin-bottom: 1rem;
+    border: 4px solid white;
 
     .buttons {
       height: 100%;
@@ -91,6 +96,14 @@ const OtherProjects = styled.div`
     &:hover .buttons {
       opacity: 1;
     }
+  }
+
+  .img-1 {
+    background: url(${secondProjectImg});
+  }
+
+  .img-2 {
+    background: url(${thirdProjectImg});
   }
 
   h3 {
@@ -153,10 +166,10 @@ export default function Projects() {
         </MainProject>
         <OtherProjects>
           <article>
-            <div class='img'>
+            <div className='img img-1'>
               <div className='buttons'>
-                <AButton href='' title='' target='_blank' rel='noreferrer'>Live</AButton>
-                <AButton href='' title='' target='_blank' rel='noreferrer'>Github</AButton>
+                <AButton href='https://festive-wozniak-3c6751.netlify.app/' title='Hosted on Netlify' target='_blank' rel='noreferrer'>Live</AButton>
+                <AButton href='https://github.com/willykleitinho/todo-app-react' title='Go to Github repository' target='_blank' rel='noreferrer'>Github</AButton>
               </div>
             </div>
             <h3>Basic todo app</h3>
@@ -172,10 +185,10 @@ export default function Projects() {
             </section>
           </article>
           <article>
-            <div class='img'>
+            <div className='img img-2'>
               <div className='buttons'>
-                <AButton href='' title='' target='_blank' rel='noreferrer'>Live</AButton>
-                <AButton href='' title='' target='_blank' rel='noreferrer'>Github</AButton>
+                <AButton href='https://6222b29a748be5000854da5d--sharp-nightingale-e918a0.netlify.app/' title='Hosted on Netlify' target='_blank' rel='noreferrer'>Live</AButton>
+                <AButton href='https://github.com/willykleitinho/rest-countries-api-interface' title='Go to Github repository' target='_blank' rel='noreferrer'>Github</AButton>
               </div>
             </div>
             <h3>REST Countries API interface</h3>
