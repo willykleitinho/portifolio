@@ -27,6 +27,18 @@ const StyledSection = styled.section`
   svg {
     margin-right: 1rem;
   }
+
+  a {
+    color: var(--clr-text);
+
+    &:hover {
+      color: var(--clr-primary);
+    }
+  }
+
+  svg:hover path {
+    fill: var(--clr-primary) !important;
+  }
 `;
 
 export default function Contact() {
@@ -37,11 +49,15 @@ export default function Contact() {
         <ul>
           <li>
             <FontAwesomeIcon icon={faEnvelope} />
-            owellington.nascimento@gmail.com
+            <a href='mailto:owellington.nascimento@gmail.com' title='E'>
+              owellington.nascimento@gmail.com
+            </a>
           </li>
           <li>
             <FontAwesomeIcon icon={faGithub} />
-            Github.com/willykleitinho
+            <a href='https://github.com/willykleitinho' title='Profile on Github'>
+              github.com/willykleitinho
+            </a>
           </li>
         </ul>
       </div>
