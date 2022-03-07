@@ -94,7 +94,7 @@ export default function Contact() {
             </a>
           </motion.li>
           <motion.li transition={{ delay: 1 }} initial={{ opacity: 0, x: -100 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
-            <a href='https://github.com/willykleitinho' title='Profile on Github'>
+            <a href='https://github.com/willykleitinho' title='Perfil no Github'>
               <FontAwesomeIcon icon={faGithub} />
               github.com/willykleitinho
             </a>

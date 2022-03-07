@@ -25,7 +25,7 @@ const StyledNav = styled.nav`
     padding: 0.5rem 1rem;
     padding-left: 5rem;
     clip-path: polygon(0 0, 300% 0%, 300% 100%, 12% 99%);
-    background-color: #1A1A1D;
+    background-color: #2c3633;
 
     &::after {
       content: '';

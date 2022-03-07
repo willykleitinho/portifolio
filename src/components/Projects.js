@@ -249,7 +249,7 @@ export default function Projects() {
                 <AButton href='https://github.com/willykleitinho/todo-app-react' title='Go to Github repository' target='_blank' rel='noreferrer'>Github</AButton>
               </div>
             </div>
-            <h3>Basic todo app (React)</h3>
+            <h3>Basic todo app (React JS)</h3>
             <section>
               <h4>Features:</h4>
               <ul>
@@ -269,7 +269,7 @@ export default function Projects() {
                 <AButton href='https://github.com/willykleitinho/rest-countries-api-interface' title='Go to Github repository' target='_blank' rel='noreferrer'>Github</AButton>
               </div>
             </div>
-            <h3>REST Countries API interface (React)</h3>
+            <h3>REST Countries API interface (React JS)</h3>
             <section>
               <h4>Features:</h4>
               <ul>
