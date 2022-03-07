@@ -81,7 +81,7 @@ const MainProject = styled.article`
     }
   }
 
-  a {
+  .info a {
     color: var(--clr-primary);
 
     &:hover {
