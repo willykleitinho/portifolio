@@ -13,9 +13,12 @@ import Footer from './components/Footer';
 function App() {
   
   useEffect(() => {
-    window.addEventListener('hashchange', () => {
-      window.scrollTo({ top: document.querySelector(window.location.hash).offsetTop })
-    });
+    function navigateToHash() {
+      const offsetTop = document.querySelector(window.location.hash).offsetTop;
+      window.scrollTo({ top: offsetTop });
+    }
+    window.addEventListener('load', navigateToHash);
+    window.addEventListener('hashchange', navigateToHash);
   }, []);
 
   return (

@@ -219,8 +219,8 @@ export default function Projects() {
               sugestões ou que você deseja assistir
               em algum momento.
               <br />
-              Fiz o design da interface, o backend e o frontend,
-              usando a <a href='http://www.omdbapi.com/' target='_blank' rel='noreferrer'>OMDb API</a> para pegar as informações dos
+              Fiz o design da interface, o backend e o frontend.
+              E usei a <a href='http://www.omdbapi.com/' target='_blank' rel='noreferrer'>OMDb API</a> para pegar as informações dos
               filmes/séries.
             </p>
             <div className='lists'>

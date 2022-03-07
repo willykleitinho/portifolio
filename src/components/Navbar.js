@@ -82,19 +82,19 @@ const StyledNav = styled.nav`
 export default function Navbar() {
   return (
     <StyledNav>
-      <motion.ul transition={{ delay: 1 }} initial={{ x: '100%' }} animate={{ x: 0 }}>
-        <li>
+      <motion.ul transition={{ delay: 0 }} initial={{ x: '100%' }} animate={{ x: 0 }}>
+        <motion.li transition={{ delay: 0.4 }} initial={{ y: -50, opacity: 0 }} animate={{ y: 0, opacity: 1 }}>
           <a href='#home'>home</a>
-        </li>
-        <li>
+        </motion.li>
+        <motion.li transition={{ delay: 0.4 }} initial={{ y: -50, opacity: 0 }} animate={{ y: 0, opacity: 1 }}>
           <a href='#sobre-mim'>sobre mim</a>
-        </li>
-        <li>
+        </motion.li>
+        <motion.li transition={{ delay: 0.4 }} initial={{ y: -50, opacity: 0 }} animate={{ y: 0, opacity: 1 }}>
           <a href='#projetos'>projetos</a>
-        </li>
-        <li>
+        </motion.li>
+        <motion.li transition={{ delay: 0.4 }} initial={{ y: -50, opacity: 0 }} animate={{ y: 0, opacity: 1 }}>
           <a href='#contato'>contato</a>
-        </li>
+        </motion.li>
       </motion.ul>
     </StyledNav>
   );
