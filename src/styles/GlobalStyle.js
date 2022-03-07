@@ -36,6 +36,7 @@ const GlobalStyle = createGlobalStyle`
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
+    overflow-x: hidden;
   }
 
   br {
