@@ -81,6 +81,14 @@ const MainProject = styled.article`
     }
   }
 
+  a {
+    color: var(--clr-primary);
+
+    &:hover {
+      color: #FFF893;
+    }
+  }
+
   @media (min-width: 465px) {
     .lists {
       flex-direction: row;
@@ -212,7 +220,7 @@ export default function Projects() {
               em algum momento.
               <br />
               Fiz o design da interface, o backend e o frontend,
-              usando a OMDb API para pegar as informações dos
+              usando a <a href='http://www.omdbapi.com/' target='_blank' rel='noreferrer'>OMDb API</a> para pegar as informações dos
               filmes/séries.
             </p>
             <div className='lists'>
@@ -234,7 +242,6 @@ export default function Projects() {
                   <li>React Router v6</li>
                   <li>Framer Motion</li>
                   <li>Axios</li>
-                  <li>OMDb API</li>
                 </ul>
               </section>
             </div>
