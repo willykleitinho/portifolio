@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
 import AButton from './AButton';
-import mainProjectImg from './moviefliek.png';
-import secondProjectImg from './todo-app.png';
-import thirdProjectImg from './rest-countries-interface.png';
+import mainProjectImg from './assets/desktop/moviefliek.png';
+import secondProjectImg from './assets/desktop/todo-app.png';
+import thirdProjectImg from './assets/desktop/rest-countries-interface.png';
 
 const StyledSection = styled.section`
   padding: 6rem 0;
@@ -172,7 +172,7 @@ export default function Projects() {
                 <AButton href='https://github.com/willykleitinho/todo-app-react' title='Go to Github repository' target='_blank' rel='noreferrer'>Github</AButton>
               </div>
             </div>
-            <h3>Basic todo app</h3>
+            <h3>Basic todo app (React)</h3>
             <section>
               <h4>Features:</h4>
               <ul>
@@ -191,7 +191,7 @@ export default function Projects() {
                 <AButton href='https://github.com/willykleitinho/rest-countries-api-interface' title='Go to Github repository' target='_blank' rel='noreferrer'>Github</AButton>
               </div>
             </div>
-            <h3>REST Countries API interface</h3>
+            <h3>REST Countries API interface (React)</h3>
             <section>
               <h4>Features:</h4>
               <ul>

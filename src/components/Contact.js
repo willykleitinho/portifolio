@@ -33,11 +33,11 @@ const StyledSection = styled.section`
 
     &:hover {
       color: var(--clr-primary);
-    }
-  }
 
-  svg:hover path {
-    fill: var(--clr-primary) !important;
+      svg path {
+        fill: var(--clr-primary) !important;
+      }
+    }
   }
 `;
 
@@ -48,14 +48,14 @@ export default function Contact() {
         <h2>Contato</h2>
         <ul>
           <li>
-            <FontAwesomeIcon icon={faEnvelope} />
             <a href='mailto:owellington.nascimento@gmail.com' title='E'>
+              <FontAwesomeIcon icon={faEnvelope} />
               owellington.nascimento@gmail.com
             </a>
           </li>
           <li>
-            <FontAwesomeIcon icon={faGithub} />
             <a href='https://github.com/willykleitinho' title='Profile on Github'>
+              <FontAwesomeIcon icon={faGithub} />
               github.com/willykleitinho
             </a>
           </li>
