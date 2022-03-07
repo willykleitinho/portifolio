@@ -38,7 +38,7 @@ const MainProject = styled.article`
     background: #aaa;
     background: url(${mainProjectImgMob});
     background-size: cover;
-    border: 4px solid white;
+    border: 4px solid var(--clr-text-primary);
 
     .buttons {
       height: 100%;
@@ -59,6 +59,11 @@ const MainProject = styled.article`
   h3 {
     color: var(--clr-primary);
     margin-bottom: 1rem;
+  }
+
+  h4 {
+    color: #FFF893;
+    margin-bottom: 0.5rem;
   }
 
   .lists {
@@ -106,7 +111,7 @@ const OtherProjects = styled.div`
     background: #aaa;
     background-size: cover !important;
     margin-bottom: 1rem;
-    border: 4px solid white;
+    border: 4px solid var(--clr-text-primary);
     position: relative;
 
     p {
@@ -158,6 +163,10 @@ const OtherProjects = styled.div`
     color: var(--clr-primary);
   }
 
+  h4 {
+    color: #FFF893;
+  }
+
   ul {
     list-style-position: inside;
   }
@@ -194,7 +203,7 @@ export default function Projects() {
             <AButton href='https://www.moviefliek.com' title='Go to MovieFliek website' target='_blank' rel='noreferrer'>Live</AButton>
             </div>
           </motion.div>
-          <motion.div className='info' transition={{ delay: 1 }} initial={{ opacity: 0, x: 100 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
+          <motion.div className='info' transition={{ delay: 0.75 }} initial={{ opacity: 0, x: 100 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
             <h3>MovieFliek</h3>
             <p>
               O MovieFliek é um webapp onde é possível criar,
@@ -252,7 +261,7 @@ export default function Projects() {
               </ul>
             </section>
           </motion.article>
-          <motion.article transition={{ delay: 1.5 }} initial={{ opacity: 0, x: -100 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
+          <motion.article transition={{ delay: 1.25 }} initial={{ opacity: 0, x: -100 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
             <div className='img img-2'>
             <p>By <a href='https://www.frontendmentor.io/profile/willykleitinho' title='' target='_blank' rel='noreferrer'>Frontend Mentor</a></p>
               <div className='buttons'>

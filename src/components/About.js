@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 const StyledSection = styled(motion.section)`
   background: var(--clr-bg-front);
   padding: 6rem 2rem;
-  padding-bottom: 0rem;
+  padding-bottom: 3rem !important;
   
   .container {
     max-width: 800px;
@@ -52,7 +52,7 @@ export default function About() {
     <StyledSection id='sobre-mim'>
       <div className='container'>
         <motion.h2 transition={{ delay: 0.5 }} initial={{ opacity: 0, x: -100 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>Sobre mim</motion.h2>
-        <motion.p transition={{ delay: 1 }} initial={{ opacity: 0, x: 100 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
+        <motion.p transition={{ delay: 0.75 }} initial={{ opacity: 0, x: 100 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
           Sempre me interessei por tecnologia e programação, sempre acompanhando desde
           os 13 anos de idade. Porém só comecei a estudar mais a fundo aos 16 através
           do <a title='CS50x course homepage' target='_blank' rel='noreferrer' href='https://cs50.harvard.edu/x/'>CS50x</a>.

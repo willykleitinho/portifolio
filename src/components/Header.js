@@ -34,7 +34,7 @@ const StyledHeader = styled.header`
 export default function Header() {
   return (
     <StyledHeader id='home'>
-      <motion.div className='container' transition={{ delay: 1 }} initial={{ x: '-100%' }} animate={{ x: 0 }}>
+      <motion.div className='container' initial={{ x: '-100%' }} animate={{ x: 0 }}>
         <div className='info'>
           <h1 className='title' transition={{ delay: 0 }} initial={{ opacity: 0, y: -100 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <motion.span transition={{ delay: 0.5 }} initial={{ opacity: 0, y: -100 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className='small'>Olá! Meu nome é</motion.span>

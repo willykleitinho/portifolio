@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons'
@@ -84,20 +85,20 @@ export default function Contact() {
   return (
     <StyledSection id='contato'>
       <div className='container'>
-        <h2>Contato</h2>
+        <motion.h2 transition={{ delay: 0 }} initial={{ opacity: 0, y: -100 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>Contato</motion.h2>
         <ul>
-          <li>
+          <motion.li transition={{ delay: 0.5 }} initial={{ opacity: 0, x: -100 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
             <a href='mailto:owellington.nascimento@gmail.com' title='Email'>
               <FontAwesomeIcon icon={faEnvelope} />
               owellington.nascimento@gmail.com
             </a>
-          </li>
-          <li>
+          </motion.li>
+          <motion.li transition={{ delay: 1 }} initial={{ opacity: 0, x: -100 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
             <a href='https://github.com/willykleitinho' title='Profile on Github'>
               <FontAwesomeIcon icon={faGithub} />
               github.com/willykleitinho
             </a>
-          </li>
+          </motion.li>
         </ul>
       </div>
     </StyledSection>
