@@ -33,7 +33,7 @@ const GlobalStyle = createGlobalStyle`
     color: var(--clr-text-primary);
     background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.65) 0%), 
       url(${bgImg}),
-      rgb(10, 10, 10);
+      rgb(10, 10, 10) ;
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
