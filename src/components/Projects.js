@@ -1,12 +1,17 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 import AButton from './AButton';
-import mainProjectImg from './assets/desktop/moviefliek.png';
-import secondProjectImg from './assets/desktop/todo-app.png';
-import thirdProjectImg from './assets/desktop/rest-countries-interface.png';
+
+import mainProjectImgDesk from './assets/desktop/moviefliek.png';
+import secondProjectImgDesk from './assets/desktop/todo-app.png';
+import thirdProjectImgDesk from './assets/desktop/rest-countries-interface.png';
+import mainProjectImgMob from './assets/mobile/moviefliek.png';
+import secondProjectImgMob from './assets/mobile/todo-app.png';
+import thirdProjectImgMob from './assets/mobile/rest-countries-interface.png';
 
 const StyledSection = styled.section`
-  padding: 6rem 0;
+  padding: 6rem 2rem;
   background: var(--clr-bg-front);
   
   .container {
@@ -20,17 +25,18 @@ const StyledSection = styled.section`
   margin-bottom: 2rem;
   }
 `;
-    
+
 const MainProject = styled.article`
   display: grid;
-  grid-template-columns: 4fr 5fr;
   gap: 2rem;
+  margin: auto;
   margin-bottom: 4rem;
+  max-width: 500px;
     
   .img {
-    aspect-ratio: 16/9;
+    aspect-ratio: 375 / 670;
     background: #aaa;
-    background: url(${mainProjectImg});
+    background: url(${mainProjectImgMob});
     background-size: cover;
     border: 4px solid white;
 
@@ -52,11 +58,13 @@ const MainProject = styled.article`
 
   h3 {
     color: var(--clr-primary);
+    margin-bottom: 1rem;
   }
 
   .lists {
     display: flex;
     gap: 1rem;
+    flex-direction: column;
     margin-top: 1rem;
 
     section {
@@ -67,20 +75,50 @@ const MainProject = styled.article`
       list-style-position: inside;
     }
   }
+
+  @media (min-width: 465px) {
+    .lists {
+      flex-direction: row;
+    }
+    
+    .img {
+      aspect-ratio: 16/9;
+      background: url(${mainProjectImgDesk});
+    }
+  }
+
+  @media (min-width: 1050px) {
+    grid-template-columns: 4fr 5fr;
+    max-width: none;
+  }
 `;
 
 const OtherProjects = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
+  max-width: 500px;
+  margin: auto;
+  gap: 4rem;
 
   .img {
-    aspect-ratio: 16/9;
+    aspect-ratio: 375 / 670;
     width: 100%;
     background: #aaa;
     background-size: cover !important;
     margin-bottom: 1rem;
     border: 4px solid white;
+    position: relative;
+
+    p {
+      position: absolute;
+      top: -1.5rem;
+      left: 0;
+      font-size: 0.8rem;
+      opacity: 0.75;
+
+      a {
+        color: var(--clr-primary);
+      }
+    }
 
     .buttons {
       height: 100%;
@@ -99,11 +137,11 @@ const OtherProjects = styled.div`
   }
 
   .img-1 {
-    background: url(${secondProjectImg});
+    background: url(${secondProjectImgMob});
   }
 
   .img-2 {
-    background: url(${thirdProjectImg});
+    background: url(${thirdProjectImgMob});
   }
 
   h3 {
@@ -114,20 +152,40 @@ const OtherProjects = styled.div`
   ul {
     list-style-position: inside;
   }
+
+  @media (min-width: 465px) {
+    .img {
+      aspect-ratio: 16/9;
+    }
+
+    .img-1 {
+      background: url(${secondProjectImgDesk});
+    }
+
+    .img-2 {
+      background: url(${thirdProjectImgDesk});
+    }
+  }
+
+  @media (min-width: 1050px) {
+    grid-template-columns: 1fr 1fr;
+    max-width: none;
+    gap: 2rem;
+  }
 `;
 
 export default function Projects() {
   return (
     <StyledSection id='projetos'>
       <div className='container'>
-        <h2>Projetos</h2>
+        <motion.h2 transition={{ delay: 0.5 }} initial={{ opacity: 0, y: -100 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>Projetos</motion.h2>
         <MainProject>
-          <div className='img'>
+          <motion.div className='img' transition={{ delay: 0.5 }} initial={{ opacity: 0, x: -100 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
             <div className='buttons'>
             <AButton href='https://www.moviefliek.com' title='Go to MovieFliek website' target='_blank' rel='noreferrer'>Live</AButton>
             </div>
-          </div>
-          <div className='info'>
+          </motion.div>
+          <motion.div className='info' transition={{ delay: 1 }} initial={{ opacity: 0, x: 100 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
             <h3>MovieFliek</h3>
             <p>
               O MovieFliek é um webapp onde é possível criar,
@@ -162,11 +220,12 @@ export default function Projects() {
                 </ul>
               </section>
             </div>
-          </div>
+          </motion.div>
         </MainProject>
         <OtherProjects>
-          <article>
+          <motion.article transition={{ delay: 1 }} initial={{ opacity: 0, x: -100 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
             <div className='img img-1'>
+            <p>By <a href='https://www.frontendmentor.io/' title='' target='_blank' rel='noreferrer'>Frontend Mentor</a></p>
               <div className='buttons'>
                 <AButton href='https://festive-wozniak-3c6751.netlify.app/' title='Hosted on Netlify' target='_blank' rel='noreferrer'>Live</AButton>
                 <AButton href='https://github.com/willykleitinho/todo-app-react' title='Go to Github repository' target='_blank' rel='noreferrer'>Github</AButton>
@@ -183,9 +242,10 @@ export default function Projects() {
                 <li>Modo diurno / modo noturno</li>
               </ul>
             </section>
-          </article>
-          <article>
+          </motion.article>
+          <motion.article transition={{ delay: 1.5 }} initial={{ opacity: 0, x: -100 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
             <div className='img img-2'>
+            <p>By <a href='https://www.frontendmentor.io/' title='' target='_blank' rel='noreferrer'>Frontend Mentor</a></p>
               <div className='buttons'>
                 <AButton href='https://6222b29a748be5000854da5d--sharp-nightingale-e918a0.netlify.app/' title='Hosted on Netlify' target='_blank' rel='noreferrer'>Live</AButton>
                 <AButton href='https://github.com/willykleitinho/rest-countries-api-interface' title='Go to Github repository' target='_blank' rel='noreferrer'>Github</AButton>
@@ -202,7 +262,7 @@ export default function Projects() {
                 <li>Modo diurno / modo noturno</li>
               </ul>
             </section>
-          </article>
+          </motion.article>
         </OtherProjects>
       </div>
     </StyledSection>

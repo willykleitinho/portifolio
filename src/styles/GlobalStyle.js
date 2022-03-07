@@ -25,6 +25,7 @@ const GlobalStyle = createGlobalStyle`
   html {
     font-size: 16px;
     font-family: var(--font-family-1);
+    overflow-x: hidden;
   }
 
   body {

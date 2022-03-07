@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
-import { motion, useViewportScroll, useTransform } from 'framer-motion';
+// import { motion, useViewportScroll, useTransform } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 const StyledNav = styled.nav`
   position: fixed;
@@ -9,9 +10,12 @@ const StyledNav = styled.nav`
   right: 0;
   max-width: 800px;
   margin: auto;
-  display: flex;
+  /* display: flex; */
+  /* breaks at less than 600 */
+  display: none;
   justify-content: flex-end;
   z-index: 1;
+
 
   ul {
     list-style: none;
@@ -21,6 +25,7 @@ const StyledNav = styled.nav`
     padding: 0.5rem 1rem;
     padding-left: 5rem;
     clip-path: polygon(0 0, 300% 0%, 300% 100%, 12% 99%);
+    background-color: #1A1A1D;
 
     &::after {
       content: '';
@@ -30,7 +35,7 @@ const StyledNav = styled.nav`
       left: 100%;
       width: 100%;
       height: 100%;
-      background: inherit;
+      background-color: inherit;
     }
 
     li {
@@ -69,16 +74,21 @@ const StyledNav = styled.nav`
       color: var(--clr-text-primary);
     }
   }
+
+  @media (min-width: 600px) {
+    display: flex;
+  }
 `;
 
 export default function Navbar() {
 
-  const { scrollYProgress } = useViewportScroll();
-  const bgColor = useTransform(scrollYProgress, [0, 0.3, 0.35], ['rgba(0,0,0,0)', 'rgba(0,0,0,0)', '#1A1A1D'])
+  /* const { scrollYProgress } = useViewportScroll();
+  const bgColor = useTransform(scrollYProgress, [0, 0.3, 0.35], ['rgba(0,0,0,0)', 'rgba(0,0,0,0)', '#1A1A1D']) */
 
   return (
     <StyledNav>
-      <motion.ul style={{ backgroundColor: bgColor }} transition={{ delay: 1 }} initial={{ x: '100%' }} animate={{ x: 0 }}>
+      {/* <motion.ul style={{ backgroundColor: bgColor }} transition={{ delay: 1 }} initial={{ x: '100%' }} animate={{ x: 0 }}> */}
+      <motion.ul transition={{ delay: 1 }} initial={{ x: '100%' }} animate={{ x: 0 }}>
         <li>
           <a href='#home' title=''>home</a>
         </li>

@@ -25,6 +25,10 @@ const StyledHeader = styled.header`
       font-weight: normal;
     }
   }
+
+  @media (min-width: 760px) {
+    padding: 0 3rem;
+  }
 `;
 
 export default function Header() {
@@ -32,11 +36,11 @@ export default function Header() {
     <StyledHeader id='home'>
       <motion.div className='container' transition={{ delay: 1 }} initial={{ x: '-100%' }} animate={{ x: 0 }}>
         <div className='info'>
-          <h1 className='title' transition={{ delay: 2 }} initial={{ opacity: 0, y: -100 }} animate={{ opacity: 1, y: 0 }}>
-            <motion.span transition={{ delay: 2 }} initial={{ opacity: 0, y: -100 }} animate={{ opacity: 1, y: 0 }} className='small'>Olá! Meu nome é</motion.span>
-            <motion.span transition={{ delay: 2 }} initial={{ opacity: 0, y: -100 }} animate={{ opacity: 1, y: 0 }}>Wellington Oliveira</motion.span>
+          <h1 className='title' transition={{ delay: 0 }} initial={{ opacity: 0, y: -100 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+            <motion.span transition={{ delay: 0.5 }} initial={{ opacity: 0, y: -100 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className='small'>Olá! Meu nome é</motion.span>
+            <motion.span transition={{ delay: 1 }} initial={{ opacity: 0, x: 100 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>Wellington Oliveira</motion.span>
           </h1>
-          <motion.p transition={{ delay: 2 }} initial={{ opacity: 0, x: -200 }} animate={{ opacity: 1, x: 0 }}>
+          <motion.p transition={{ delay: 1 }} initial={{ opacity: 0, y: 100 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             Desenvolvedor web front-end
           </motion.p>
         </div>

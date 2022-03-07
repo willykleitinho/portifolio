@@ -5,7 +5,7 @@ import { faEnvelope } from '@fortawesome/free-regular-svg-icons'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 
 const StyledSection = styled.section`
-  padding: 6rem 0;
+  padding: 6rem 2rem;
 
   .container {
     max-width: 800px;
@@ -30,14 +30,22 @@ const StyledSection = styled.section`
 
   a {
     color: var(--clr-text);
+    display: block;
+    transition: transform 300ms;
+    transform-origin: left;
 
     &:hover {
       color: var(--clr-primary);
+      transform: scale(1.1);
 
       svg path {
         fill: var(--clr-primary) !important;
       }
     }
+  }
+
+  @media (min-width: 760px) {
+    padding: 6rem 3rem;
   }
 `;
 
@@ -48,7 +56,7 @@ export default function Contact() {
         <h2>Contato</h2>
         <ul>
           <li>
-            <a href='mailto:owellington.nascimento@gmail.com' title='E'>
+            <a href='mailto:owellington.nascimento@gmail.com' title='Email'>
               <FontAwesomeIcon icon={faEnvelope} />
               owellington.nascimento@gmail.com
             </a>

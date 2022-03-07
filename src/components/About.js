@@ -4,28 +4,45 @@ import { motion } from 'framer-motion';
 
 const StyledSection = styled(motion.section)`
   background: var(--clr-bg-front);
-  padding: 6rem 0;
+  padding: 6rem 2rem;
+  padding-bottom: 0rem;
+  
   .container {
     max-width: 800px;
-    margin: auto;
-    text-align: right;
-    
-    h2 {
-      color: var(--clr-primary);
-      margin-bottom: 1rem;
+    /* margin: auto;
+    text-align: right; */
+  }
+
+  h2 {
+    color: var(--clr-primary);
+    margin-bottom: 1rem;
+  }
+
+  p {
+    margin-left: auto;
+    max-width: 550px;
+  }
+
+  a {
+    color: var(--clr-primary);
+
+    &:hover {
+      color: #FFF893;
     }
+  }
 
-    p {
-      max-width: 70%;
-      margin-left: auto;
+  @media (min-width: 500px) {
+    .container {
+      text-align: right;
     }
+  }
 
-    a {
-      color: var(--clr-primary);
+  @media (min-width: 760px) {
+    padding: 6rem 3rem;
 
-      &:hover {
-        color: #FFF893;
-      }
+    .container {
+      margin: auto;
+      text-align: right;
     }
   }
 `;
@@ -34,8 +51,8 @@ export default function About() {
   return (
     <StyledSection id='sobre-mim'>
       <div className='container'>
-        <motion.h2 transition={{ delay: 1 }} initial={{ opacity: 0, x: '-200%' }} animate={{ opacity: 1, x: 0 }}>Sobre mim</motion.h2>
-        <motion.p transition={{ delay: 1 }} initial={{ opacity: 0, x: '200%' }} animate={{ opacity: 1, x: 0 }}>
+        <motion.h2 transition={{ delay: 0.5 }} initial={{ opacity: 0, x: -100 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>Sobre mim</motion.h2>
+        <motion.p transition={{ delay: 1 }} initial={{ opacity: 0, x: 100 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
           Sempre me interessei por tecnologia e programação, sempre acompanhando desde
           os 13 anos de idade. Porém só comecei a estudar mais a fundo aos 16 através
           do <a title='CS50x course homepage' target='_blank' rel='noreferrer' href='https://cs50.harvard.edu/x/'>CS50x</a>.
