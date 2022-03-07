@@ -84,6 +84,7 @@ const MainProject = styled.article`
     .img {
       aspect-ratio: 16/9;
       background: url(${mainProjectImgDesk});
+      background-size: cover;
     }
   }
 
@@ -117,6 +118,14 @@ const OtherProjects = styled.div`
 
       a {
         color: var(--clr-primary);
+      }
+
+      &:hover {
+        opacity: 1;
+        
+        a {
+          transform: scale(2);
+        }
       }
     }
 
@@ -225,7 +234,7 @@ export default function Projects() {
         <OtherProjects>
           <motion.article transition={{ delay: 1 }} initial={{ opacity: 0, x: -100 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
             <div className='img img-1'>
-            <p>By <a href='https://www.frontendmentor.io/' title='' target='_blank' rel='noreferrer'>Frontend Mentor</a></p>
+            <p>By <a href='https://www.frontendmentor.io/profile/willykleitinho' title='' target='_blank' rel='noreferrer'>Frontend Mentor</a></p>
               <div className='buttons'>
                 <AButton href='https://festive-wozniak-3c6751.netlify.app/' title='Hosted on Netlify' target='_blank' rel='noreferrer'>Live</AButton>
                 <AButton href='https://github.com/willykleitinho/todo-app-react' title='Go to Github repository' target='_blank' rel='noreferrer'>Github</AButton>
@@ -245,7 +254,7 @@ export default function Projects() {
           </motion.article>
           <motion.article transition={{ delay: 1.5 }} initial={{ opacity: 0, x: -100 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
             <div className='img img-2'>
-            <p>By <a href='https://www.frontendmentor.io/' title='' target='_blank' rel='noreferrer'>Frontend Mentor</a></p>
+            <p>By <a href='https://www.frontendmentor.io/profile/willykleitinho' title='' target='_blank' rel='noreferrer'>Frontend Mentor</a></p>
               <div className='buttons'>
                 <AButton href='https://6222b29a748be5000854da5d--sharp-nightingale-e918a0.netlify.app/' title='Hosted on Netlify' target='_blank' rel='noreferrer'>Live</AButton>
                 <AButton href='https://github.com/willykleitinho/rest-countries-api-interface' title='Go to Github repository' target='_blank' rel='noreferrer'>Github</AButton>

@@ -14,6 +14,7 @@ const StyledSection = styled.section`
 
   h2 {
     margin-bottom: 3rem;
+    color: var(--clr-primary);
   }
 
   ul {
@@ -24,15 +25,20 @@ const StyledSection = styled.section`
     }
   }
 
-  svg {
-    margin-right: 1rem;
-  }
-
   a {
     color: var(--clr-text);
-    display: block;
+    transform-origin: center;
+    display: flex;
     transition: transform 300ms;
-    transform-origin: left;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    
+    svg {
+      flex-basis: 100%;
+      height: 2rem;
+    }
 
     &:hover {
       color: var(--clr-primary);
@@ -40,6 +46,31 @@ const StyledSection = styled.section`
 
       svg path {
         fill: var(--clr-primary) !important;
+      }
+    }
+  }
+
+  @media (min-width: 450px) {
+    a {
+      transform-origin: center;
+      gap: 1rem;
+      justify-content: left;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      transform-origin: left;
+    
+      svg {
+        flex-basis: auto;
+        height: 1.1rem;
+      }
+
+      &:hover {
+        color: var(--clr-primary);
+        transform: scale(1.1);
+
+        svg path {
+          fill: var(--clr-primary) !important;
+        }
       }
     }
   }
