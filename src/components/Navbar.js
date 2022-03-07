@@ -16,7 +16,6 @@ const StyledNav = styled.nav`
   justify-content: flex-end;
   z-index: 1;
 
-
   ul {
     list-style: none;
     display: flex;
@@ -81,25 +80,20 @@ const StyledNav = styled.nav`
 `;
 
 export default function Navbar() {
-
-  /* const { scrollYProgress } = useViewportScroll();
-  const bgColor = useTransform(scrollYProgress, [0, 0.3, 0.35], ['rgba(0,0,0,0)', 'rgba(0,0,0,0)', '#1A1A1D']) */
-
   return (
     <StyledNav>
-      {/* <motion.ul style={{ backgroundColor: bgColor }} transition={{ delay: 1 }} initial={{ x: '100%' }} animate={{ x: 0 }}> */}
       <motion.ul transition={{ delay: 1 }} initial={{ x: '100%' }} animate={{ x: 0 }}>
         <li>
-          <a href='#home' title=''>home</a>
+          <a href='#home'>home</a>
         </li>
         <li>
-          <a href='#sobre-mim' title=''>sobre mim</a>
+          <a href='#sobre-mim'>sobre mim</a>
         </li>
         <li>
-          <a href='#projetos' title=''>projetos</a>
+          <a href='#projetos'>projetos</a>
         </li>
         <li>
-          <a href='#contato' title=''>contato</a>
+          <a href='#contato'>contato</a>
         </li>
       </motion.ul>
     </StyledNav>
