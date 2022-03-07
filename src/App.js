@@ -14,6 +14,10 @@ function App() {
   
   useEffect(() => {
     function navigateToHash() {
+      if (!window.location.hash) {
+        return;
+      }
+
       const offsetTop = document.querySelector(window.location.hash).offsetTop;
       window.scrollTo({ top: offsetTop });
     }
